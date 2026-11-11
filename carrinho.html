@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiDel - Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-esquerda">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo ThaiDel" class="logo-topo">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Menu</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="pedidos.html">Meus pedidos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-topo">
+            <button id="btn-tema" class="btn-tema" onclick="alternarTema()">Modo Escuro</button>
+            <a href="login.html"><img src="img/usuario.png" alt="Usuário"></a>
+            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho"></a>
+        </div>
+    </header>
+
+    <div class="faixa-titulo">
+        <h1>Carrinho</h1>
+        <p>Falta bem pouquinho para uma verdadeira experiência de sabores!</p>
+    </div>
+
+    <main class="container-pagina">
+        <div class="layout-carrinho">
+            <div class="coluna-pedidos-carrinho">
+                <h2 class="titulo-secao-form">Seus Pedidos</h2>
+
+                <div id="lista-itens-carrinho"></div>
+
+                <div class="area-observacao">
+                    <label for="obs-cozinha">Observação para a cozinha:</label>
+                    <input type="text" id="obs-cozinha" placeholder="escreva aqui" maxlength="100">
+                </div>
+            </div>
+
+            <div class="coluna-resumo-carrinho">
+                <div class="caixa-resumo">
+                    <h2 class="titulo-secao-form">Resumo do pedido</h2>
+
+                    <div class="linha-resumo">
+                        <span>Subtotal</span>
+                        <span id="valor-subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="linha-resumo">
+                        <span>Entrega</span>
+                        <span id="valor-entrega">R$ 0,00</span>
+                    </div>
+                    <div class="linha-resumo">
+                        <span>Total</span>
+                        <span id="valor-total">R$ 0,00</span>
+                    </div>
+
+                    <div class="divisor-resumo"></div>
+
+                    <h3 class="titulo-secao-form">Endereço</h3>
+                    <div id="endereco-carrinho" class="texto-endereco-resumo">
+                        Rua dos timbiras, 142, Bloco 13, apt 204<br>
+                        Bairro dos limoeiros, Belo Horizonte<br>
+                        CEP 30140-080
+                    </div>
+                    <a href="perfil.html" class="link-alterar-endereco">alterar endereço</a>
+
+                    <div class="divisor-resumo"></div>
+
+                    <h3 class="titulo-secao-form">Pagamento</h3>
+                    <select id="forma-pagamento" class="select-pagamento">
+                        <option value="pix">pix</option>
+                        <option value="cartao de credito">cartão de crédito</option>
+                        <option value="cartao de debito">cartão de débito</option>
+                        <option value="dinheiro">dinheiro</option>
+                    </select>
+
+                    <div class="centro-btn">
+                        <button type="button" class="btn-confirmar" onclick="confirmarPedido()">Confirmar</button>
+                    </div>
+                </div>
+
+                <p class="tempo-entrega-nota">Entrega Estimada - 35 ~ 55 minutos</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="rodape" class="rodape">
+        <div class="rodape-esquerda">
+            <p>(31)91234-9876</p>
+            <p>thaidel@thaidel.com</p>
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+
+        <img src="img/logo.png" alt="Logo ThaiDel" class="logo-rodape">
+
+        <div class="rodape-direita">
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

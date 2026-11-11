@@ -1,0 +1,36 @@
+{
+  "codigo_pedido": "PROP-001",
+  "status": "Pendente",
+  "total": 132.00,
+  "cliente": {
+    "nome": "Carlos Emanuel",
+    "email": "CarlosEmanuel@gmail.com",
+    "telefone": "(31) 99999-9999",
+    "cpf": "123.456.789-00",
+    "nascimento": "06/12/2009",
+    "cep": "30140-080",
+    "bairro": "Bairro dos limoeiros",
+    "rua": "Rua dos timbiras",
+    "numero": "142",
+    "complemento": "Bloco 13, apt 204",
+    "referencia": "Do lado de um pe de jambo",
+    "cidade": "Belo Horizonte",
+    "estado": "MG - Minas Gerais"
+  },
+  "itens": [
+    {
+      "prato": "Pad Thai",
+      "quantidade": 1,
+      "preco": 64.00
+    },
+    {
+      "prato": "Gai Satai",
+      "quantidade": 1,
+      "preco": 52.00
+    }
+  ],
+  "observacao": "Molho Extra Picante",
+  "pagamento": "pix",
+  "subtotal": 116.00,
+  "entrega": 16.00
+}

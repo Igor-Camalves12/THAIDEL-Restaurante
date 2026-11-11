@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiDel - Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-esquerda">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo ThaiDel" class="logo-topo">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Menu</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="pedidos.html">Meus pedidos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-topo">
+            <button id="btn-tema" class="btn-tema" onclick="alternarTema()">Modo Escuro</button>
+            <a href="login.html"><img src="img/usuario.png" alt="Usuário"></a>
+            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho"></a>
+        </div>
+    </header>
+
+    <div class="faixa-titulo">
+        <h1>Contato</h1>
+        <p>Entre em contato conosco para tirar dúvidas, enviar sugestões ou falar sobre seu pedido!</p>
+    </div>
+
+    <main class="container-pagina">
+        <div class="layout-carrinho">
+            <div class="coluna-pedidos-carrinho">
+                <form onsubmit="enviarContato(event)">
+                    <h2 class="titulo-secao-form">Fale Conosco</h2>
+
+                    <div class="linha-form">
+                        <div class="campo-form">
+                            <label for="contato-nome">Nome completo</label>
+                            <input type="text" id="contato-nome" placeholder="Digite seu nome completo" maxlength="60">
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="campo-form">
+                            <label for="contato-email">Email</label>
+                            <input type="text" id="contato-email" placeholder="Digite seu email" maxlength="60">
+                        </div>
+                        <div class="campo-form">
+                            <label for="contato-telefone">Telefone</label>
+                            <input type="text" id="contato-telefone" placeholder="(31) 99999-9999" maxlength="15" oninput="mascaraTelefone(this)">
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="campo-form">
+                            <label for="contato-assunto">Assunto</label>
+                            <select id="contato-assunto">
+                                <option value="duvida">Dúvida sobre o cardápio</option>
+                                <option value="pedido">Problema com meu pedido</option>
+                                <option value="elogio">Elogio ou sugestão</option>
+                                <option value="outro">Outros assuntos</option>
+                            </select>
+                        </div>
+                        <div class="campo-form">
+                            <label for="contato-pedido">Número do pedido (opcional)</label>
+                            <input type="text" id="contato-pedido" placeholder="Ex: 32" maxlength="6" oninput="apenasNumeros(this)">
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="campo-form">
+                            <label for="contato-mensagem">Mensagem</label>
+                            <textarea id="contato-mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." maxlength="300"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-grande-vermelho">Enviar</button>
+                </form>
+            </div>
+
+            <div class="coluna-resumo-carrinho">
+                <div class="caixa-resumo">
+                    <h2 class="titulo-secao-form">Nossos canais</h2>
+
+                    <div class="texto-endereco-resumo">
+                        <strong>Telefone / WhatsApp:</strong><br>
+                        (31) 91234-9876<br><br>
+                        <strong>Email:</strong><br>
+                        thaidel@thaidel.com
+                    </div>
+
+                    <div class="divisor-resumo"></div>
+
+                    <h3 class="titulo-secao-form">Horários</h3>
+                    <div class="texto-endereco-resumo">
+                        Terça a Sexta: 18h00 às 23h30<br>
+                        Sábado e Domingo: 11h30 às 15h30 e 18h00 às 00h00<br>
+                        Segunda-feira: Fechado
+                    </div>
+
+                    <div class="divisor-resumo"></div>
+
+                    <h3 class="titulo-secao-form">Endereço</h3>
+                    <div class="texto-endereco-resumo">
+                        Av. do Contorno, 1420 - Savassi<br>
+                        Belo Horizonte - MG<br>
+                        CEP 30110-008
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="rodape" class="rodape">
+        <div class="rodape-esquerda">
+            <p>(31)91234-9876</p>
+            <p>thaidel@thaidel.com</p>
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+
+        <img src="img/logo.png" alt="Logo ThaiDel" class="logo-rodape">
+
+        <div class="rodape-direita">
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

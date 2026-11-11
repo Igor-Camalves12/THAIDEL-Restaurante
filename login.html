@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiDel - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-esquerda">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo ThaiDel" class="logo-topo">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Menu</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="pedidos.html">Meus pedidos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-topo">
+            <button id="btn-tema" class="btn-tema" onclick="alternarTema()">Modo Escuro</button>
+            <a href="login.html"><img src="img/usuario.png" alt="Usuário"></a>
+            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho"></a>
+        </div>
+    </header>
+
+    <div class="faixa-titulo">
+        <h1>Login</h1>
+        <p>Entre para fazer seu pedido e provar os sabores mais exóticos!</p>
+    </div>
+
+    <section class="area-login">
+        <div class="login-container">
+            <form class="caixa-login" onsubmit="fazerLogin(event)">
+                <h2>Bem vindo de volta!</h2>
+
+                <div class="grupo-login">
+                    <label for="login-email">email</label>
+                    <input type="text" id="login-email" placeholder="Digite seu email" maxlength="60">
+                </div>
+
+                <div class="grupo-login">
+                    <label for="login-senha">senha</label>
+                    <input type="password" id="login-senha" placeholder="Digite seu senha" maxlength="20">
+                </div>
+
+                <div class="opcoes-login">
+                    <label class="lembrar-label"><input type="checkbox"> lembrar de mim</label>
+                    <a href="cadastro.html">esqueci a senha</a>
+                </div>
+
+                <button type="submit" class="btn-entrar">Entrar</button>
+                <a href="cadastro.html" class="link-criar-conta">Ainda não tem uma conta?</a>
+            </form>
+        </div>
+    </section>
+
+    <footer id="rodape" class="rodape">
+        <div class="rodape-esquerda">
+            <p>(31)91234-9876</p>
+            <p>thaidel@thaidel.com</p>
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+
+        <img src="img/logo.png" alt="Logo ThaiDel" class="logo-rodape">
+
+        <div class="rodape-direita">
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

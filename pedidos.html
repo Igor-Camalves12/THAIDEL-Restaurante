@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiDel - Meus Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-esquerda">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo ThaiDel" class="logo-topo">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Menu</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="pedidos.html">Meus pedidos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-topo">
+            <button id="btn-tema" class="btn-tema" onclick="alternarTema()">Modo Escuro</button>
+            <a href="login.html"><img src="img/usuario.png" alt="Usuário"></a>
+            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho"></a>
+        </div>
+    </header>
+
+    <div class="faixa-titulo">
+        <h1>Meus Pedidos</h1>
+        <p>Acompanhe seus pedidos em andamento e veja seu histórico!</p>
+    </div>
+
+    <main class="container-pagina">
+        <div class="barra-busca-area">
+            <label for="busca-pedidos">Busque seus melhores pedidos</label>
+            <div class="linha-busca">
+                <div class="caixa-input-busca">
+                    <input type="text" id="busca-pedidos" placeholder="Digite o nome do prato" maxlength="40">
+                    <span class="icone-lupa">&#128269;</span>
+                </div>
+                <button type="button" class="btn-buscar" onclick="buscarPedidos()">Buscar</button>
+            </div>
+
+            <div class="filtros">
+                <button type="button" class="btn-filtro" onclick="filtrarPedidos('Todos')">Todos os pedidos</button>
+                <button type="button" class="btn-filtro" onclick="filtrarPedidos('Em andamento')">Em andamento</button>
+                <button type="button" class="btn-filtro" onclick="filtrarPedidos('Entregues')">Entregues</button>
+                <button type="button" class="btn-filtro" onclick="filtrarPedidos('Cancelados')">Cancelados</button>
+            </div>
+        </div>
+
+        <h2 class="titulo-secao-form">Seu Pedido atual</h2>
+        <div id="pedido-atual-area"></div>
+
+        <h2 class="titulo-secao-form">Pedidos Anteriores</h2>
+        <div id="pedidos-anteriores-area"></div>
+    </main>
+
+    <footer id="rodape" class="rodape">
+        <div class="rodape-esquerda">
+            <p>(31)91234-9876</p>
+            <p>thaidel@thaidel.com</p>
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+
+        <img src="img/logo.png" alt="Logo ThaiDel" class="logo-rodape">
+
+        <div class="rodape-direita">
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

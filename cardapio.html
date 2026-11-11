@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiDel - Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="topo-esquerda">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo ThaiDel" class="logo-topo">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Menu</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="pedidos.html">Meus pedidos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-topo">
+            <button id="btn-tema" class="btn-tema" onclick="alternarTema()">Modo Escuro</button>
+            <a href="login.html"><img src="img/usuario.png" alt="Usuário"></a>
+            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho"></a>
+        </div>
+    </header>
+
+    <div class="faixa-titulo">
+        <h1>Cardápio</h1>
+        <p>Entre para fazer seu pedido e provar os sabores mais exóticos!</p>
+    </div>
+
+    <main class="container-pagina">
+        <div class="barra-busca-area">
+            <label for="input-busca-prato">Descubra seu novo prato favorito</label>
+            <div class="linha-busca">
+                <div class="caixa-input-busca">
+                    <input type="text" id="input-busca-prato" placeholder="Digite o nome do prato" maxlength="40">
+                    <span class="icone-lupa">&#128269;</span>
+                </div>
+                <button type="button" class="btn-buscar" onclick="buscarCardapio()">Buscar</button>
+            </div>
+
+            <div class="filtros">
+                <button type="button" class="btn-filtro" onclick="filtrarCardapio('Todos')">Todos</button>
+                <button type="button" class="btn-filtro" onclick="filtrarCardapio('Entradas')">Entradas</button>
+                <button type="button" class="btn-filtro" onclick="filtrarCardapio('Sobremesas')">Sobremesas</button>
+                <button type="button" class="btn-filtro" onclick="filtrarCardapio('Pratos principais')">Pratos principais</button>
+            </div>
+        </div>
+
+        <div class="grade-cardapio">
+            <div class="card-prato" data-categoria="Pratos principais">
+                <span class="categoria-prato">Pratos principais</span>
+                <h3>Pad Thai</h3>
+                <div class="linhas-decorativas">
+                    <div class="linha-curta-1"></div>
+                    <div class="linha-curta-2"></div>
+                </div>
+                <p>
+                    O Pad Thai é o prato nacional da Tailândia, famoso por equilibrar perfeitamente os sabores doce, salgado, azedo e picante.
+                </p>
+                <div class="rodape-card-prato">
+                    <span class="preco-prato">R$64,00</span>
+                    <button type="button" class="btn-adicionar" onclick="adicionarAoCarrinho('Pad Thai', 64)">adicionar</button>
+                </div>
+            </div>
+
+            <div class="card-prato" data-categoria="Pratos principais">
+                <span class="categoria-prato">Pratos principais</span>
+                <h3>Gai Satay</h3>
+                <div class="linhas-decorativas">
+                    <div class="linha-curta-1"></div>
+                    <div class="linha-curta-2"></div>
+                </div>
+                <p>
+                    Espetinhos de frango marinados em leite de coco e cúrcuma, grelhados na brasa e servidos com molho cremoso de amendoim.
+                </p>
+                <div class="rodape-card-prato">
+                    <span class="preco-prato">R$52,00</span>
+                    <button type="button" class="btn-adicionar" onclick="adicionarAoCarrinho('Gai Satay', 52)">adicionar</button>
+                </div>
+            </div>
+
+            <div class="card-prato" data-categoria="Pratos principais">
+                <span class="categoria-prato">Pratos principais</span>
+                <h3>Massaman Curry</h3>
+                <div class="linhas-decorativas">
+                    <div class="linha-curta-1"></div>
+                    <div class="linha-curta-2"></div>
+                </div>
+                <p>
+                    Ensopado encorpado de carne macia e batatas cozidas no leite de coco com especiarias aromáticas como canela e cardamomo.
+                </p>
+                <div class="rodape-card-prato">
+                    <span class="preco-prato">R$68,00</span>
+                    <button type="button" class="btn-adicionar" onclick="adicionarAoCarrinho('Massaman Curry', 68)">adicionar</button>
+                </div>
+            </div>
+
+            <div class="card-prato" data-categoria="Entradas">
+                <span class="categoria-prato">Entradas</span>
+                <h3>Por Pia Pod</h3>
+                <div class="linhas-decorativas">
+                    <div class="linha-curta-1"></div>
+                    <div class="linha-curta-2"></div>
+                </div>
+                <p>
+                    Tradicionais rolinhos primavera tailandeses recheados com legumes frescos, ervas aromáticas e servidos com molho agridoce.
+                </p>
+                <div class="rodape-card-prato">
+                    <span class="preco-prato">R$36,00</span>
+                    <button type="button" class="btn-adicionar" onclick="adicionarAoCarrinho('Por Pia Pod', 36)">adicionar</button>
+                </div>
+            </div>
+
+            <div class="card-prato" data-categoria="Pratos principais">
+                <span class="categoria-prato">Pratos principais</span>
+                <h3>Tom Yum Goon</h3>
+                <div class="linhas-decorativas">
+                    <div class="linha-curta-1"></div>
+                    <div class="linha-curta-2"></div>
+                </div>
+                <p>
+                    Sopa tailandesa quente e aromática preparada com camarões frescos, capim-limão, gengibre, folhas de limão e toque picante.
+                </p>
+                <div class="rodape-card-prato">
+                    <span class="preco-prato">R$58,00</span>
+                    <button type="button" class="btn-adicionar" onclick="adicionarAoCarrinho('Tom Yum Goon', 58)">adicionar</button>
+                </div>
+            </div>
+
+            <div class="card-prato" data-categoria="Sobremesas">
+                <span class="categoria-prato">Sobremesas</span>
+                <h3>Pad Thai</h3>
+                <div class="linhas-decorativas">
+                    <div class="linha-curta-1"></div>
+                    <div class="linha-curta-2"></div>
+                </div>
+                <p>
+                    O Pad Thai é o prato nacional da Tailândia, famoso por equilibrar perfeitamente os sabores doce, salgado, azedo e picante.
+                </p>
+                <div class="rodape-card-prato">
+                    <span class="preco-prato">R$64,00</span>
+                    <button type="button" class="btn-adicionar" onclick="adicionarAoCarrinho('Pad Thai', 64)">adicionar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="rodape" class="rodape">
+        <div class="rodape-esquerda">
+            <p>(31)91234-9876</p>
+            <p>thaidel@thaidel.com</p>
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+
+        <img src="img/logo.png" alt="Logo ThaiDel" class="logo-rodape">
+
+        <div class="rodape-direita">
+            <div class="links-corporativo">
+                <span>corporativo</span>
+                <span>corporativo</span>
+                <span>corporativo</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
