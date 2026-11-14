@@ -14,7 +14,7 @@ seu perfil
 
 Toda a parte de front foi utilizada com: HTML, CSS E JavaScript, utlizando das melhores práticas e lógicas para o uso.
 
-**BackEnd -- **
+**BackEnd --**
 
 O código conversa via Json desserializado, então o html/Css/Js gera um json(dados.json) que é lido pelo c# e salva as informações no banco de dados
 
