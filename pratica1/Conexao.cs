@@ -15,7 +15,7 @@ namespace pratica1
         {
             MySqlConnection conn;
             string dadosConexao =
-                //mude se necessário
+                //mude para conectar com seu próprio banco de dados, instale o dump e rode antes
                 "Persist Security Info = false; " +
                 "server = localhost; " +
                 "database = restaurante_tailandes; " +
